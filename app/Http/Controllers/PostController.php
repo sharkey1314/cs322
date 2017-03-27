@@ -8,8 +8,7 @@ class PostController extends Controller
 {
     //
     public function index() {
-
-        return view('tasks.index', compact('tasks'));
+        return view('posts.index');
     }
     public function login() {
         return view('posts.login');

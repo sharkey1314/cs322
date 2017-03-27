@@ -1,4 +1,4 @@
-@extends ('layout')
+@extends ('layout.template')
 
 @section ('content')
 <table id="myTable" style="table-layout:fixed; width:100%; border: 3px solid black;">
