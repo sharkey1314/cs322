@@ -42,4 +42,13 @@ Route::get('/', function() {
 Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/{task}','TasksController@show');
 Route::get('/posts', 'PostController@index');
+Route::get('/posts/login', 'PostController@login');
+
+Route::post('/posts', 'PostController@store');
+// get/posts for all the posts
+// get/posts/create to create a post
+// POST /posts
+// GET /posts/{id}/edit
+// GET /posts/{id}
+// DELETE /posts/{id} // trigger delete instead of show action
 // controller => PostController, eloquent model => Post, migration => create_posts_table
