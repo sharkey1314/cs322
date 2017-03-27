@@ -39,9 +39,9 @@ Route::get('/', function() {
 
 
 
-Route::get('/', 'TasksController@index');
+Route::get('/', 'PostController@index');
 Route::get('/tasks/{task}','TasksController@show');
-Route::get('/posts', 'PostController@index');
+//Route::get('/posts', 'PostController@index');
 Route::get('/posts/login', 'PostController@login');
 Route::get('/task', 'PostController@index');
 Route::post('/posts', 'PostController@store');

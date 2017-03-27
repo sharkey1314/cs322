@@ -9,8 +9,8 @@ class PostController extends Controller
 {
     //
     public function index() {
-
-        return view('posts.index');
+        $posts = Post::all();
+        return view('index', compact('posts'));
     }
     public function login() {
         return view('posts.login');
