@@ -1,4 +1,4 @@
-@extends ('layout.template')
+@extends ('layout')
 @section ('content')
 <!-- User name box -->
 <form method="POST" action="/posts">
