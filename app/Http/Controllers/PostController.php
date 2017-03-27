@@ -33,12 +33,12 @@ class PostController extends Controller
         // mass assigning all of the fields ... cannot submit any form data
         $this->validate(request(),[
             'username' =>'required',
-            'password' => 'required'
+            'password' => 'required',
             'email' => 'required'
         ]);
         Post::create([
             'name' => request('username'),
-            'password' => request('password')
+            'password' => request('password'),
             'email' =>request('email')
         ]);
         /*$post = new Post;
