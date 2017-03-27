@@ -43,7 +43,7 @@ Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/{task}','TasksController@show');
 Route::get('/posts', 'PostController@index');
 Route::get('/posts/login', 'PostController@login');
-
+Route::get('/posts/index', 'PostController@index');
 Route::post('/posts', 'PostController@store');
 // get/posts for all the posts
 // get/posts/create to create a post

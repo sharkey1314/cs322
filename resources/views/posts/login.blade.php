@@ -5,12 +5,12 @@
   {{ csrf_field() }}
   <div class="form-group">
     <label for="username">User Name</label>
-    <input type="text" class="form-control" name="username" id="username" placeholder="User Name">
+    <input type="text" class="form-control" name="username" id="username" placeholder="User Name" required>
   </div>
   <!-- Password box -->
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+    <input type="password" class="form-control" name="password" id="password" placeholder="Password" required> <!-- required validation -->
   </div>
   <!-- Upload files -->
 
