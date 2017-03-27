@@ -1,4 +1,4 @@
-@extends ('layout')
+@extends ('layout.template')
 @section ('content')
 <!-- User name box -->
 <form method="POST" action="/posts">
@@ -21,14 +21,15 @@
   <!-- Submit button -->
   <button type="submit" class="btn btn-default">Login</button>
 </form>
-
-<div class="alert alert-error">
+@if(count($errors))
+<div class="alert alert-danger">
   <ul>
     @foreach($errors->all() as $error)
-      <li>
-        {{$error}}
-      </li>
+    <li>
+      {{$error}}
+    </li>
     @endforeach
   </ul>
 </div>
+@endif
 @endsection
