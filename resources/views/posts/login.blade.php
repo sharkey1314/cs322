@@ -21,4 +21,14 @@
   <!-- Submit button -->
   <button type="submit" class="btn btn-default">Login</button>
 </form>
+
+<div class="alert alert-error">
+  <ul>
+    @foreach($errors->all() as $error)
+      <li>
+        {{$error}}
+      </li>
+    @endforeach
+  </ul>
+</div>
 @endsection

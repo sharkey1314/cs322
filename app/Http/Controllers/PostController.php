@@ -31,8 +31,8 @@ class PostController extends Controller
         //dd(request(['title', 'body']));
         // still fail.... need to do something
         // mass assigning all of the fields ... cannot submit any form data
-        $this->validate(request() [
-            'title' =>'required'
+        $this->validate(request(),[
+            'title' =>'required',
             'body' => 'required'
         ]);
         Post::create([
