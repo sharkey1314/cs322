@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
 
 class PostController extends Controller
 {
@@ -36,7 +37,7 @@ class PostController extends Controller
             'password' => 'required',
             'email' => 'required'
         ]);
-        Post::create([
+        User::create([
             'name' => request('username'),
             'password' => request('password'),
             'email' =>request('email')
@@ -46,7 +47,7 @@ class PostController extends Controller
         $post->body = request('body');*/
 
         //$post->save();
-        return redirect('/posts');
+        return redirect('/');
     }
 
 

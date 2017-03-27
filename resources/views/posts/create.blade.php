@@ -15,8 +15,8 @@
 					<input id="username" name="username" required="required" type="text" placeholder="Username" />
 				</p>
 				<p>
-					<label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-					<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="email@gmail.com"/>
+					<label for="email" class="youmail" data-icon="e" > Your email</label>
+					<input id="email" name="email" required="required" type="email" placeholder="email@gmail.com"/>
 				</p>
 				<p>
 					<label for="password" class="youpasswd" data-icon="p">Your password </label>
