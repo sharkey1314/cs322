@@ -32,8 +32,8 @@ class PostController extends Controller
         // still fail.... need to do something
         // mass assigning all of the fields ... cannot submit any form data
         $this->validate(request(),[
-            'title' =>'required',
-            'body' => 'required'
+            'username' =>'required',
+            'password' => 'required'
         ]);
         Post::create([
             'title' => request('username'),
@@ -44,7 +44,7 @@ class PostController extends Controller
         $post->body = request('body');*/
 
         //$post->save();
-        return redirect('/posts/index');
+        return redirect('/posts');
     }
 
     // index is /tasks
