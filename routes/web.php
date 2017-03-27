@@ -54,3 +54,7 @@ Route::get('/create', 'PostController@create');
 // GET /posts/{id}
 // DELETE /posts/{id} // trigger delete instead of show action
 // controller => PostController, eloquent model => Post, migration => create_posts_table
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
