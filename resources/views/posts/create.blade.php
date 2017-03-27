@@ -11,16 +11,16 @@
 				{{ csrf_field() }}
 				<h1> Sign up </h1>
 				<p>
-					<label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-					<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Username" />
+					<label for="username" class="uname" data-icon="u">Your username</label>
+					<input id="username" name="username" required="required" type="text" placeholder="Username" />
 				</p>
 				<p>
 					<label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
 					<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="email@gmail.com"/>
 				</p>
 				<p>
-					<label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-					<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+					<label for="password" class="youpasswd" data-icon="p">Your password </label>
+					<input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
 				</p>
 				<p>
 					<label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
@@ -31,6 +31,17 @@
 				</p>
 				
 			</form>
+			@if(count($errors))
+				<div class="alert alert-danger">
+  				<ul>
+    			@foreach($errors->all() as $error)
+    			<li>
+      				{{$error}}
+    			</li>
+   				 @endforeach
+  				</ul>
+				</div>
+			@endif
 		</div>
 	</div>  
 </div>

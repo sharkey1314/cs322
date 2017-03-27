@@ -34,10 +34,12 @@ class PostController extends Controller
         $this->validate(request(),[
             'username' =>'required',
             'password' => 'required'
+            'email' => 'required'
         ]);
         Post::create([
-            'title' => request('username'),
-            'body' => request('password')
+            'name' => request('username'),
+            'password' => request('password')
+            'email' =>request('email')
         ]);
         /*$post = new Post;
         $post->title = request('title');
@@ -46,6 +48,8 @@ class PostController extends Controller
         //$post->save();
         return redirect('/posts');
     }
+
+
 
     // index is /tasks
     // create is /tasks/create
